@@ -2,10 +2,13 @@
 
 ## Project Structure
 ```
-calculator/
-├── calculator_backend.py   # Python Flask API
-├── Calculator.jsx          # React frontend component
-└── requirements.txt
+Scientific-Calculator/
+├── backend   # Python Flask API
+      └── calculator_backend.py
+├── frontend          # React frontend component
+      └── src
+          └── App.jsx
+└── README.md
 ```
 
 ---
@@ -32,26 +35,6 @@ Server starts at **http://localhost:5000**
 | DELETE | `/history/<id>`       | Delete one entry by ID         |
 | GET    | `/health`             | Check backend status           |
 
-#### POST /calculate — Request Body
-```json
-{ "expression": "12 * (3 + 4)" }
-```
-
-#### Response
-```json
-{
-  "result": 84,
-  "entry": {
-    "id": 1,
-    "expression": "12 * (3 + 4)",
-    "result": 84,
-    "timestamp": "2025-05-23 10:30:00"
-  }
-}
-```
-
----
-
 ## Frontend (React)
 
 ### Option A — Vite (recommended)
@@ -75,6 +58,7 @@ Drop `Calculator.jsx` into any React project that uses JSX.
 - **Delete entries**: remove individual records or clear all
 - **Backend status**: live indicator (online / offline)
 - **Error handling**: division by zero, invalid expressions
+- **Scientific Operations** : sin, cos, tan, asin, acos, atan
 
 ---
 
